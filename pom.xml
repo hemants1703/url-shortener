@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>tech.hemantsharma</groupId>
-    <artifactId>url-shortner</artifactId>
+    <artifactId>url-shortener</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>url-shortner</name>
     <description>url-shortner</description>

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: url-shortner
+    name: url-shortener
 
   datasource:
     url: jdbc:sqlite:url-shortener-database.sqlite
