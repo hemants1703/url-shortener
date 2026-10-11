@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: url-shortner
+
+  datasource:
+    url: jdbc:sqlite:url-shortener-database.sqlite
+    driver-class-name: org.sqlite.JDBC
+
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
