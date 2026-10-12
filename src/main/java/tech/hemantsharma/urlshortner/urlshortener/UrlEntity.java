@@ -11,13 +11,14 @@ import java.time.Instant;
 @Getter
 @Setter
 @NoArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 public class UrlEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity user;
@@ -25,6 +26,7 @@ public class UrlEntity {
     @Column(name = "original_url", updatable = false, nullable = false)
     private String originalUrl;
 
+    @EqualsAndHashCode.Include
     @Column(name = "short_code", updatable = false, nullable = false, unique = true)
     private String shortCode;
 

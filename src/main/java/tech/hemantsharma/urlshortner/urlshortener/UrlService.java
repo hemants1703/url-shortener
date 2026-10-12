@@ -20,7 +20,6 @@ public class UrlService {
         UserEntity user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Username for " + username + " not found."));
 
-        final String BASE_URL = "http://localhost:8080/url";
         final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         final int SHORT_URL_LENGTH = 6;
 

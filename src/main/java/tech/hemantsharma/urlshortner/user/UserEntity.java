@@ -13,19 +13,23 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
 
+    @ToString.Exclude
     @OneToMany(mappedBy = "user")
     private List<UrlEntity> urls = new ArrayList<>();
 
+    @EqualsAndHashCode.Include
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
+    @ToString.Exclude
     @Column(name = "password", nullable = false)
     private String password;
 
@@ -38,16 +42,6 @@ public class UserEntity {
     UserEntity(String username, String password) {
         this.username = username;
         this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "UserEntity{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                '}';
     }
 
     @PrePersist
