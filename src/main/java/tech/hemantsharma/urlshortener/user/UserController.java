@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.user;
+package tech.hemantsharma.urlshortener.user;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-import tech.hemantsharma.urlshortner.user.dtos.CreateUserRequestDto;
-import tech.hemantsharma.urlshortner.user.dtos.UserResponseDto;
+import tech.hemantsharma.urlshortener.user.dtos.CreateUserRequestDto;
+import tech.hemantsharma.urlshortener.user.dtos.UserResponseDto;
 
 @RestController
 @RequestMapping("/api/v1/users")

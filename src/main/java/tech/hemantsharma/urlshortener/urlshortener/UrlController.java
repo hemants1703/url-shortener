@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.urlshortener;
+package tech.hemantsharma.urlshortener.urlshortener;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-import tech.hemantsharma.urlshortner.urlshortener.dtos.ShortenUrlRequestDto;
-import tech.hemantsharma.urlshortner.urlshortener.dtos.ShortenedUrlResponseDto;
+import tech.hemantsharma.urlshortener.urlshortener.dtos.ShortenUrlRequestDto;
+import tech.hemantsharma.urlshortener.urlshortener.dtos.ShortenedUrlResponseDto;
 
 import java.net.URI;
 

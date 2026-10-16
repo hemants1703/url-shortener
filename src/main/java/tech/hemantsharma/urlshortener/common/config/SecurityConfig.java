@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.common.config;
+package tech.hemantsharma.urlshortener.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;

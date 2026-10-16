@@ -1,7 +1,7 @@
-package tech.hemantsharma.urlshortner.user;
+package tech.hemantsharma.urlshortener.user;
 
 import org.mapstruct.Mapper;
-import tech.hemantsharma.urlshortner.user.dtos.UserResponseDto;
+import tech.hemantsharma.urlshortener.user.dtos.UserResponseDto;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {

@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.urlshortener;
+package tech.hemantsharma.urlshortener.urlshortener;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

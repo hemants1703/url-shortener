@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.urlshortener.exceptions;
+package tech.hemantsharma.urlshortener.urlshortener.exceptions;
 
 public class ShortenedUrlNotFoundException extends RuntimeException {
     public ShortenedUrlNotFoundException(String message) {

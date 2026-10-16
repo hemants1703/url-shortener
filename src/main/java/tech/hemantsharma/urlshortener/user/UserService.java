@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.user;
+package tech.hemantsharma.urlshortener.user;
 
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NonNull;
@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import tech.hemantsharma.urlshortner.user.dtos.UserResponseDto;
+import tech.hemantsharma.urlshortener.user.dtos.UserResponseDto;
 
 @Service
 @RequiredArgsConstructor

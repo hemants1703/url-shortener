@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.urlshortener.dtos;
+package tech.hemantsharma.urlshortener.urlshortener.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

@@ -1,8 +1,8 @@
-package tech.hemantsharma.urlshortner.urlshortener;
+package tech.hemantsharma.urlshortener.urlshortener;
 
 import jakarta.persistence.*;
 import lombok.*;
-import tech.hemantsharma.urlshortner.user.UserEntity;
+import tech.hemantsharma.urlshortener.user.UserEntity;
 
 import java.time.Instant;
 

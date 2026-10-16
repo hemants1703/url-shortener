@@ -1,4 +1,4 @@
-package tech.hemantsharma.urlshortner.user.dtos;
+package tech.hemantsharma.urlshortener.user.dtos;
 
 import java.time.Instant;
 
