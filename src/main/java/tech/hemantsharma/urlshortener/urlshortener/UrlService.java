@@ -18,13 +18,15 @@ public class UrlService {
     private final UserRepository userRepository;
     private final UrlRepository urlRepository;
 
-    private String generateCode() {
-        final int SHORT_URL_LENGTH = 6;
-        final SecureRandom RANDOM = new SecureRandom();
-        final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        StringBuilder shortCode = new StringBuilder(SHORT_URL_LENGTH);
+    private static final String CHARACTERS =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private static final int SHORT_CODE_LENGTH = 6;
+    private static final SecureRandom RANDOM = new SecureRandom();
 
-        for (int i = 0; i < SHORT_URL_LENGTH; i++) {
+    private String generateCode() {
+        StringBuilder shortCode = new StringBuilder(SHORT_CODE_LENGTH);
+
+        for (int i = 0; i < SHORT_CODE_LENGTH; i++) {
             int index = RANDOM.nextInt(CHARACTERS.length());
             shortCode.append(CHARACTERS.charAt(index));
         }
@@ -36,7 +38,8 @@ public class UrlService {
         UserEntity user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Username for " + username + " not found."));
 
-        int MAX_GENERATION_ATTEMPTS = 10;
+        final int MAX_GENERATION_ATTEMPTS = 10;
+
         for (int attempt = 0; attempt < MAX_GENERATION_ATTEMPTS; attempt++) {
             String shortCode = generateCode();
 
@@ -48,7 +51,7 @@ public class UrlService {
             } catch (DataIntegrityViolationException _) {}
         }
 
-        throw new ShortCodeGenerationException("Could not generate a unique short code.");
+        throw new ShortCodeGenerationException("Could not generate a unique short code after " + MAX_GENERATION_ATTEMPTS + " attempts.");
     }
 
     public ShortenedUrlResponseDto getOriginalUrl(String shortCode) throws ShortenedUrlNotFoundException {

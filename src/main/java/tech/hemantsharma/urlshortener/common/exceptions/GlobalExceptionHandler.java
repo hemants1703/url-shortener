@@ -27,6 +27,6 @@ public class GlobalExceptionHandler {
 
         map.put("message",e.getMessage());
 
-        return new ResponseEntity<>(map, HttpStatus.EXPECTATION_FAILED);
+        return new ResponseEntity<>(map, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
